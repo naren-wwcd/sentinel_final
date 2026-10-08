@@ -28,7 +28,7 @@ export default function IncidentDetail() {
       <Card title="Attack Timeline">{d.events.length ? <EventTimeline events={d.events} /> : <Empty />}</Card>
       <div className="grid"><Card title="MITRE ATT&CK">{d.mitre.map((t) => <div key={t.id} style={{ marginBottom: 8 }}><a className="badge info" href={t.url} target="_blank" rel="noreferrer">{t.id}</a> <b>{t.name}</b><div className="mut" style={{ fontSize: 12 }}>{t.tactic}</div></div>)}</Card>
         <Card title="Risk Breakdown (why this score)">{d.risk.breakdown.map((b) => <div className="row" key={b.type}><b style={{ color: '#fca5a5', width: 34 }}>+{b.points}</b><span>{b.factor}</span><span className="sp" /><span className="mut mono">{b.event_ids.join(' ')}</span></div>)}
-          <hr style={{ borderColor: '#22304a' }} /><b>Risk Score: {d.risk.score} {d.risk.level}</b></Card></div></div>
+          <hr style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }} /><b>Risk Score: {d.risk.score} {d.risk.level}</b></Card></div></div>
     <Card title="AI Investigation" className="mb" right={<button className="btn pri" onClick={investigate} disabled={busy}>{busy ? <Loader2 size={14} className="pulse" /> : <Bot size={14} />} {d.investigation ? 'Re-run investigation' : 'Start AI investigation'}</button>}>
       <InvestigationView inv={d.investigation} /></Card>
     <Card title="Response" className="mb" pad={false}>{d.responses.length ? <table><thead><tr><th>ID</th><th>Action</th><th>Target</th><th>Type</th><th>Status</th><th></th></tr></thead><tbody>

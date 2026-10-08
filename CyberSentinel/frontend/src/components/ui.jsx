@@ -37,9 +37,9 @@ export function Providers({ children }) {
 }
 
 export function Gauge({ score, level }) {
-  const col = { CRITICAL: '#ef4444', HIGH: '#f97316', MEDIUM: '#eab308', LOW: '#22c55e' }[level] || '#38bdf8'
+  const col = { CRITICAL: '#ef4444', HIGH: '#f97316', MEDIUM: '#eab308', LOW: '#22c55e' }[level] || '#8cff2e'
   return <div style={{ textAlign: 'center' }}><svg width="170" height="100" viewBox="0 0 170 100">
-    <path d="M20 85 A65 65 0 0 1 150 85" fill="none" stroke="#1a2740" strokeWidth="12" strokeLinecap="round" pathLength="100" />
+    <path d="M20 85 A65 65 0 0 1 150 85" fill="none" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="12" strokeLinecap="round" pathLength="100" />
     <path d="M20 85 A65 65 0 0 1 150 85" fill="none" stroke={col} strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray={`${score} 100`} />
     <text x="85" y="72" textAnchor="middle" fill="#fff" fontSize="30" fontWeight="700">{score}</text><text x="85" y="92" textAnchor="middle" fill={col} fontSize="12" fontWeight="700">{level}</text></svg></div>
 }
