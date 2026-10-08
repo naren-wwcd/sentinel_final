@@ -1,2 +1,25 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>CyberSentinel — Agentic SOC Analyst</title></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="CyberSentinel — an agentic SOC analyst with human-in-the-loop response." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>CyberSentinel</title>
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      (function () {
+        var pref = 'system';
+        try { pref = localStorage.getItem('cs-theme') || 'system'; } catch (e) {}
+        var dark = pref === 'dark' || (pref === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#000000' : '#ffffff';
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
