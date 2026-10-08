@@ -11,6 +11,7 @@ import ResponseCenter from './pages/ResponseCenter.jsx'
 import Approvals from './pages/Approvals.jsx'
 import Audit from './pages/Audit.jsx'
 import Settings from './pages/Settings.jsx'
+import Documentation from './pages/Documentation.jsx'
 
 const NotFound = () => <div className="page"><Empty icon={Compass} title="Page not found" action={<Link to="/" className="btn primary">Back to overview</Link>}>That address doesn’t match anything in CyberSentinel.</Empty></div>
 
@@ -25,6 +26,7 @@ export default function App() {
     <Route path="/response" element={<ResponseCenter />} />
     <Route path="/approvals" element={<Approvals />} />
     <Route path="/audit" element={<Audit />} />
+    <Route path="/documentation" element={<Documentation />} />
     <Route path="/settings" element={<Settings />} />
     <Route path="*" element={<NotFound />} />
   </Routes></Layout>

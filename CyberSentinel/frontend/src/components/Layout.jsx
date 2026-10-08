@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
-import { SquaresFour, ShieldWarning, Pulse, Detective, Lightning, SealCheck, ClockCounterClockwise, GearSix, ShieldCheck, Sun, Moon, List, CaretRight, Flask, CircleNotch } from '@phosphor-icons/react'
+import { SquaresFour, ShieldWarning, Pulse, Detective, Lightning, SealCheck, ClockCounterClockwise, GearSix, BookOpen, ShieldCheck, Sun, Moon, List, CaretRight, Flask, CircleNotch } from '@phosphor-icons/react'
 import { api } from '../services/api'
 import { usePoll, Button } from './ui.jsx'
 import { useTheme } from './theme.jsx'
@@ -8,7 +8,7 @@ import { useTheme } from './theme.jsx'
 const NAV = [
   ['Monitor', [['/', 'Overview', SquaresFour], ['/incidents', 'Incidents', ShieldWarning], ['/events', 'Events', Pulse]]],
   ['Respond', [['/investigation', 'Investigation', Detective], ['/response', 'Response', Lightning], ['/approvals', 'Approvals', SealCheck]]],
-  ['System', [['/audit', 'Audit trail', ClockCounterClockwise], ['/settings', 'Settings', GearSix]]],
+  ['System', [['/audit', 'Audit trail', ClockCounterClockwise], ['/documentation', 'Documentation', BookOpen], ['/settings', 'Settings', GearSix]]],
 ]
 const TITLES = Object.fromEntries(NAV.flatMap(([, items]) => items.map(([to, label]) => [to, label])))
 
