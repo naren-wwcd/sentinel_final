@@ -1,0 +1,10 @@
+{
+ "block_ip": {"job":"Block IP Address","steps":[["Open simulated firewall console",false],["Create deny rule for {target}",false],["Apply rule to perimeter policy",true],["Verify rule is active",false]]},
+ "add_blocklist": {"job":"Add IP to Blocklist","steps":[["Open simulated threat-intel blocklist",false],["Add entry {target}",true],["Publish blocklist update",false]]},
+ "revoke_session": {"job":"Revoke User Sessions","steps":[["Open simulated session manager",false],["Search sessions for {target}",false],["Select active sessions",false],["Revoke sessions",true],["Verify no active sessions",false]]},
+ "create_ticket": {"job":"Create Incident Ticket","steps":[["Open simulated ticketing system",false],["Create ticket for {target}",true],["Attach evidence summary",false]]},
+ "send_notification": {"job":"Send Notification","steps":[["Open simulated notification service",false],["Compose alert for {target}",false],["Send notification",true]]},
+ "disable_user": {"job":"Disable User Account","steps":[["Open simulated identity-management console",false],["Search {target}",false],["Select account",false],["Disable account",true],["Confirm action dialog",false],["Verify account state",false]]},
+ "force_password_reset": {"job":"Force Password Reset","steps":[["Open simulated identity-management console",false],["Search {target}",false],["Select account",false],["Flag password reset on next login",true],["Confirm action dialog",false],["Record result",false]]},
+ "isolate_host": {"job":"Isolate Host","steps":[["Open simulated EDR console",false],["Search host {target}",false],["Select host",false],["Apply network isolation",true],["Confirm action dialog",false],["Verify host state",false]]}
+}
